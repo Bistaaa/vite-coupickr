@@ -1,8 +1,15 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
+<script>
+import AppMain from './components/AppMain.vue';
+
+export default {
+  name: 'App',
+  components: {
+    AppMain
+  },
+}
 </script>
 
 <template>
-  <HelloWorld msg="Vite + Vue" />
+  <AppMain />
 </template>
 
