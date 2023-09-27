@@ -3,7 +3,9 @@
 </script>
 
 <template>
-    <h1>Hello, World from header!</h1>
+    <div class="appheader-container">
+        <img id="nav-logo" src="../assets/img/Logo-oro-modificato.png" alt="">
+    </div>
 </template>
 
 <style scoped></style>

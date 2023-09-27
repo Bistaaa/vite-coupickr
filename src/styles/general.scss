@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    .app-container {
+        position: relative;
+
+
+        //////////////////////////
+        //HEADER
+        //////////////////////////
+        .appheader-container {
+            background-color: black;
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 13vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            #nav-logo {
+                height: 70%;
+            }
+        }
+
+
+
+
+        //////////////////////////
+        //MAIN      
+        //////////////////////////
+        .main-container {
+            margin-top: 13vh;
+            height: 2000px;
+            border: 2px solid black;
+        }
+
+
+
+
+
+
+        //////////////////////////
+        //FOOTER
+        //////////////////////////
+        .appfooter-container {
+            height: 300px;
+            border: 2px solid black;
+        }
+    }
+}
