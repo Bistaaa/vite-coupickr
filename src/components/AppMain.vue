@@ -2,12 +2,14 @@
 
 import AppHeader from './AppHeader.vue';
 import AppFooter from './AppFooter.vue';
+import CategoriesShow from './CategoriesShow.vue';
 
 export default {
   name: 'App',
   components: {
     AppHeader,
     AppFooter,
+    CategoriesShow,
   },
 }
 
@@ -33,9 +35,8 @@ export default {
         </div>
       </div>
 
-      <div class="main-content-container">
+      <CategoriesShow />
 
-      </div>
     </div>
 
 
