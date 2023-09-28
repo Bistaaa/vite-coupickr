@@ -4,7 +4,7 @@
 
 <template>
     <div class="appheader-container">
-        <img id="nav-logo" src="../assets/img/Logo-oro-modificato.png" alt="">
+        <img id="nav-logo" src="../assets/img/Logo-oro-modificato.png" alt="logo">
     </div>
 </template>
 

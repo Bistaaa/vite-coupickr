@@ -20,9 +20,22 @@ export default {
 
 
     <div class="main-container">
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae officia id facere corporis dolores architecto
-      nisi fugiat explicabo tenetur, labore cumque placeat exercitationem amet, ipsa magni eligendi necessitatibus
-      corrupti asperiores?
+      <div class="jumbotron">
+        <div class="jumbotron-img-container">
+          <img src="../assets/img/bags.jpg" alt="bags">
+          <div class="img-veiling"></div>
+        </div>
+        <div class="jumbotron-description">
+          <h1>Risparmia Subito!</h1>
+          <p>Esplora occasioni straordinarie e risparmia in grande con i coupon esclusivi di COUPICKR. Inizia a
+            risparmiare oggi stesso!</p>
+          <button>Inizia lo shopping</button>
+        </div>
+      </div>
+
+      <div class="main-content-container">
+
+      </div>
     </div>
 
 
