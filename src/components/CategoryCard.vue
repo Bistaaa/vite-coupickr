@@ -20,7 +20,7 @@ export default {
 </script>
 
 <template>
-    <div class="container-card">
+    <div class="card-container">
         <!-- <router-link
       class="btn"
       :to="{ 
@@ -28,10 +28,11 @@ export default {
         params: { id: restaurant.id }
       }"
     > -->
-
-        <div class="content">
-            <h3>{{ category.name }}</h3>
+        <div class="container-category-img">
+            <img :src="store.imageURL + category.img" :alt="category.name" />
         </div>
+        <h3>{{ category.name }}</h3>
+        <button class="category-button">Vai a {{ category.name }}</button>
 
 
         <!-- </router-link> -->
