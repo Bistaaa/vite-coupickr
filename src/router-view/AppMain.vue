@@ -1,8 +1,9 @@
 <script>
 
-import AppHeader from './AppHeader.vue';
-import AppFooter from './AppFooter.vue';
-import CategoriesShow from './CategoriesShow.vue';
+import AppHeader from '../components/AppHeader.vue';
+import AppFooter from '../components/AppFooter.vue';
+import CategoriesShow from '../components/CategoriesShow.vue';
+import ContactUs from '../components/ContactUs.vue';
 
 export default {
   name: 'App',
@@ -10,6 +11,7 @@ export default {
     AppHeader,
     AppFooter,
     CategoriesShow,
+    ContactUs,
   },
 }
 
@@ -36,7 +38,7 @@ export default {
       </div>
 
       <CategoriesShow />
-
+      <ContactUs />
     </div>
 
 

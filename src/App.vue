@@ -1,5 +1,5 @@
 <script>
-import AppMain from './components/AppMain.vue';
+import AppMain from './router-view/AppMain.vue';
 
 export default {
   name: 'App',
@@ -10,7 +10,7 @@ export default {
 </script>
 
 <template>
-  <AppMain />
+  <router-view></router-view>
 </template>
 
 <style lang="scss">

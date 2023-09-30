@@ -8,5 +8,8 @@ library.add(fas);
 import { createApp } from 'vue';
 import App from './App.vue'
 
-createApp(App).component("font-awesome-icon", FontAwesomeIcon).mount('#app');
+
+import { router } from './router.js';
+
+createApp(App).use(router).component("font-awesome-icon", FontAwesomeIcon).mount('#app');
 

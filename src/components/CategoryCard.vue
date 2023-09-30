@@ -21,21 +21,15 @@ export default {
 
 <template>
     <div class="card-container">
-        <!-- <router-link
-      class="btn"
-      :to="{ 
-        name: 'DishesShow',
-        params: { id: restaurant.id }
-      }"
-    > -->
         <div class="container-category-img">
-            <img :src="store.imageURL + category.img" :alt="category.name" />
+            <router-link class="btn" :to="{ name: 'StoresShow', params: { id: category.id } }">
+                <img :src="store.imageURL + category.img" :alt="category.name" />
+            </router-link>
         </div>
         <h3>{{ category.name }}</h3>
         <button class="category-button">Vai a {{ category.name }}</button>
 
 
-        <!-- </router-link> -->
     </div>
 </template>
 
