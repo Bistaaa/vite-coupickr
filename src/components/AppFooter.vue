@@ -1,10 +1,16 @@
 <script>
-
+export default {
+    methods: {
+        goToHome() {
+            this.$router.push({ name: 'AppMain' });
+        },
+    },
+};
 </script>
 
 <template>
     <div class="appfooter-container">
-        <img src="../assets/img/Logo-oro-modificato.png" alt="logo-footer">
+        <img src="../assets/img/Logo-oro-modificato.png" alt="logo-footer" @click="goToHome">
         <div id="info-container">
             <div id="about-container">
                 <h2>About COUPICKR</h2>
@@ -45,6 +51,7 @@
     img {
         height: 40px;
         margin: 50px 0 80px;
+        cursor: pointer;
     }
 
     #info-container {

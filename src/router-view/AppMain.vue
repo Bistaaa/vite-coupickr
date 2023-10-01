@@ -13,6 +13,9 @@ export default {
     CategoriesShow,
     ContactUs,
   },
+  mounted() {
+    window.scrollTo(0, 0);
+  },
 }
 
 </script>

@@ -1,10 +1,16 @@
 <script>
-
+export default {
+    methods: {
+        goToHome() {
+            this.$router.push({ name: 'AppMain' });
+        },
+    },
+};
 </script>
 
 <template>
     <div class="appheader-container">
-        <img id="nav-logo" src="../assets/img/Logo-oro-modificato.png" alt="logo">
+        <img id="nav-logo" src="../assets/img/Logo-oro-modificato.png" alt="logo" @click="goToHome">
     </div>
 </template>
 
@@ -23,6 +29,7 @@
 
     #nav-logo {
         height: 70%;
+        cursor: pointer;
     }
 }
 </style>

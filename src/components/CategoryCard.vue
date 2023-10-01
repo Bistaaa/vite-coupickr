@@ -27,7 +27,9 @@ export default {
             </router-link>
         </div>
         <h3>{{ category.name }}</h3>
-        <button class="category-button">Vai a {{ category.name }}</button>
+        <router-link class="category-button" :to="{ name: 'StoresShow', params: { id: category.id } }">
+            Vai a {{ category.name }}
+        </router-link>
 
 
     </div>
