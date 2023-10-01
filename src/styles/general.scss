@@ -122,11 +122,49 @@ body {
 
                         .container-category-img {
                             width: 90%;
+                            position: relative;
 
                             img {
                                 width: 100%;
                                 background-size: cover;
                                 border-radius: 20px;
+                            }
+
+                            .category-card-overlay {
+                                opacity: 0;
+                                position: absolute;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%, -50%);
+                                width: 100%;
+                                height: 100%;
+                                border: 2px solid black;
+                                background-color: rgba(0, 0, 0, 0.5);
+                                transition: opacity 0.3s;
+
+                                &:hover {
+                                    opacity: 1;
+                                }
+
+                                span {
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    position: absolute;
+                                    top: 50%;
+                                    left: 50%;
+                                    transform: translate(-50%, -50%);
+                                    border: 2px solid #ffffff;
+                                    width: 80%;
+                                    height: 80%;
+                                    border-radius: 20px;
+                                    background-color: rgba(0, 0, 0, 0.5);
+                                    text-align: center;
+                                    font-weight: bold;
+                                    text-transform: uppercase;
+                                    color: #ffffff;
+                                    font-size: 25px;
+                                }
                             }
                         }
 

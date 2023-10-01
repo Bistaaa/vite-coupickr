@@ -24,6 +24,9 @@ export default {
         <div class="container-category-img">
             <router-link class="btn" :to="{ name: 'StoresShow', params: { id: category.id } }">
                 <img :src="store.imageURL + category.img" :alt="category.name" />
+                <div class="category-card-overlay">
+                    <span>{{ category.name }}</span>
+                </div>
             </router-link>
         </div>
         <h3>{{ category.name }}</h3>
