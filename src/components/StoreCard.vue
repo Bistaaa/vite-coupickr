@@ -14,6 +14,9 @@ export default {
     methods: {
         redirectToStoreInfo() {
             router.push({ name: 'StoreInfo', params: { id: this.singleStore.id } });
+        },
+        handleImageError(event) {
+            event.target.src = this.store.errorImageURL + this.singleStore.logo;
         }
     },
 
@@ -25,8 +28,8 @@ export default {
 
     mounted() {
         console.log('1: ', store);
-        console.log('2: ', this.store);
-        console.log('3: ', this.singleStore);
+        console.log('2: ', this.store.errorImageURL);
+        console.log('3: ', this.store.errorImageURL + this.singleStore.logo);
     }
 }
 </script>
@@ -34,7 +37,7 @@ export default {
 <template>
     <div class="storeshow-info-container">
         <div class="img-container" @click="redirectToStoreInfo">
-            <img :src="store.imageURL + this.singleStore.logo" :alt="this.singleStore.logo">
+            <img :src="store.imageURL + this.singleStore.logo" @error="handleImageError" :alt="this.singleStore.logo">
             <div class="store-card-overlay">
                 <span>{{ this.singleStore.store_name }}</span>
             </div>

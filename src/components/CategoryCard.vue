@@ -14,7 +14,9 @@ export default {
         }
     },
     methods: {
-
+        handleImageError(event) {
+            event.target.src = this.store.errorImageURL + this.category.img;
+        }
     }
 }
 </script>
@@ -23,7 +25,7 @@ export default {
     <div class="card-container">
         <div class="container-category-img">
             <router-link class="btn" :to="{ name: 'StoresShow', params: { id: category.id } }">
-                <img :src="store.imageURL + category.img" :alt="category.name" />
+                <img :src="store.imageURL + category.img" @error="handleImageError" :alt="category.name" />
                 <div class="category-card-overlay">
                     <span>{{ category.name }}</span>
                 </div>
