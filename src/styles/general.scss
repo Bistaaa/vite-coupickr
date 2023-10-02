@@ -225,111 +225,114 @@ body {
                 padding: 30px 10px;
                 margin-bottom: 50px;
 
-                .storeshow-info-container {
+                .visibility-store-container {
+
+                    .storeshow-info-container {
 
 
-                    .img-container {
-                        width: 100%;
-                        height: 250px;
-                        overflow: hidden;
-                        border-radius: 15px;
-                        position: relative;
-
-                        img {
+                        .img-container {
                             width: 100%;
-                            height: 100%;
-                            object-fit: contain;
-                        }
+                            height: 250px;
+                            overflow: hidden;
+                            border-radius: 15px;
+                            position: relative;
 
-                        .store-card-overlay {
-                            opacity: 0;
-                            position: absolute;
-                            top: 50%;
-                            left: 50%;
-                            transform: translate(-50%, -50%);
-                            width: 100%;
-                            height: 100%;
-                            border: 2px solid black;
-                            border: transparent;
-                            background-color: rgba(0, 0, 0, 0.5);
-                            transition: opacity 0.3s;
-
-                            &:hover {
-                                opacity: 1;
+                            img {
+                                width: 100%;
+                                height: 100%;
+                                object-fit: contain;
                             }
 
-                            span {
-                                display: flex;
-                                justify-content: center;
-                                align-items: center;
+                            .store-card-overlay {
+                                opacity: 0;
                                 position: absolute;
                                 top: 50%;
                                 left: 50%;
                                 transform: translate(-50%, -50%);
-                                border: 2px solid #ffffff;
-                                width: 80%;
-                                height: 80%;
-                                border-radius: 20px;
+                                width: 100%;
+                                height: 100%;
+                                border: 2px solid black;
+                                border: transparent;
                                 background-color: rgba(0, 0, 0, 0.5);
-                                text-align: center;
-                                font-weight: bold;
-                                text-transform: uppercase;
-                                color: #ffffff;
-                                font-size: 25px;
-                                cursor: pointer;
+                                transition: opacity 0.3s;
+
+                                &:hover {
+                                    opacity: 1;
+                                }
+
+                                span {
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    position: absolute;
+                                    top: 50%;
+                                    left: 50%;
+                                    transform: translate(-50%, -50%);
+                                    border: 2px solid #ffffff;
+                                    width: 80%;
+                                    height: 80%;
+                                    border-radius: 20px;
+                                    background-color: rgba(0, 0, 0, 0.5);
+                                    text-align: center;
+                                    font-weight: bold;
+                                    text-transform: uppercase;
+                                    color: #ffffff;
+                                    font-size: 25px;
+                                    cursor: pointer;
+                                }
                             }
                         }
-                    }
 
-                    .info-container {
-                        display: flex;
-                        align-items: center;
-                        justify-content: space-between;
-                        margin: 25px 0;
+                        .info-container {
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            margin: 25px 0;
 
-                        .affiliation-code {
-                            background-color: #fbd9cf;
-                            padding: 7px 13px;
-                            border-radius: 8px;
-                            font-weight: bold;
-                            font-size: 15px;
+                            .affiliation-code {
+                                background-color: #fbd9cf;
+                                padding: 7px 13px;
+                                border-radius: 8px;
+                                font-weight: bold;
+                                font-size: 15px;
+                            }
+
+                            .discount {
+                                color: #f35525;
+                                font-size: 22px;
+                                font-weight: bold;
+                            }
                         }
 
-                        .discount {
-                            color: #f35525;
-                            font-size: 22px;
-                            font-weight: bold;
+                        h3 {
+                            margin-bottom: 30px;
+                            font-size: 25px;
+                        }
+
+                        .end-offer {}
+
+                        hr {
+                            width: 100%;
+                            margin: 25px 0;
+                            border: 1px solid #ececec;
+                            border-top: none;
+                            border-left: none;
+                            border-right: none;
                         }
                     }
 
-                    h3 {
-                        margin-bottom: 30px;
-                        font-size: 25px;
-                    }
+                    .storeshow-button {
+                        background-color: #1e1e1e;
+                        color: #ffffff;
+                        border-radius: 20px;
+                        padding: 11px 35px;
+                        text-decoration: none;
+                        font-weight: bold;
+                        transition: background-color 0.2s;
 
-                    .end-offer {}
-
-                    hr {
-                        width: 100%;
-                        margin: 25px 0;
-                        border: 1px solid #ececec;
-                        border-top: none;
-                        border-left: none;
-                        border-right: none;
-                    }
-                }
-
-                .storeshow-button {
-                    background-color: #1e1e1e;
-                    color: #ffffff;
-                    border-radius: 20px;
-                    padding: 11px 35px;
-                    text-decoration: none;
-                    font-weight: bold;
-                    transition: background-color 0.2s;
-
-                    &:hover {
-                        background-color: #f35525;
+                        &:hover {
+                            background-color: #f35525;
+                        }
                     }
                 }
             }

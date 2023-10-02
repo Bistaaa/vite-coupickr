@@ -22,7 +22,7 @@ export default {
 </script>
 
 <template>
-    <div class="card-container">
+    <div class="card-container" v-if="category.is_hidden === 0">
         <div class="container-category-img">
             <router-link class="btn" :to="{ name: 'StoresShow', params: { id: category.id } }">
                 <img :src="store.imageURL + category.img" @error="handleImageError" :alt="category.name" />
