@@ -35,7 +35,7 @@ export default {
 </script>
 
 <template>
-    <div class="visibility-store-container" v-if="this.singleStore.is_hidden === 0">
+    <div class="storeshow-visibility-container">
         <div class="storeshow-info-container">
             <div class="img-container" @click="redirectToStoreInfo">
                 <img :src="store.imageURL + this.singleStore.logo" @error="handleImageError" :alt="this.singleStore.logo">

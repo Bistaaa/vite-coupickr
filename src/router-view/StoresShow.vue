@@ -5,7 +5,6 @@ import StoreCard from '../components/StoreCard.vue';
 import AppHeader from '../components/AppHeader.vue';
 import AppFooter from '../components/AppFooter.vue';
 
-
 export default {
     name: 'StoresShow',
     components: {
@@ -13,12 +12,16 @@ export default {
         AppFooter,
         StoreCard
     },
-
     data() {
         return {
             store,
             stores: [],
-
+        }
+    },
+    computed: {
+        filteredStores() {
+            // Filtra gli store in base alla proprietà is_hidden
+            return this.store.storesList.filter(singleStore => singleStore.is_hidden === 0);
         }
     },
     mounted() {
@@ -38,9 +41,6 @@ export default {
 
                     // Salva i dati della categoria selezionata nello store
                     store.categorySelected = response.data.categorySelected;
-
-                    /*  console.log('lista stores: ', store.storesList);
-                     console.log('categoria: ', store.categorySelected); */
                 })
                 .catch(error => {
                     console.log(error);
@@ -56,7 +56,7 @@ export default {
     <div class="stores-container">
         <h2>Scegli l'offerta migliore per te!</h2>
         <div class="store-cards-container">
-            <div class="storeshow-card" v-for="(singleStore, index) in store.storesList" :key="singleStore.id">
+            <div class="storeshow-card" v-for="(singleStore, index) in filteredStores" :key="singleStore.id">
                 <StoreCard :singleStore="singleStore" />
             </div>
         </div>
