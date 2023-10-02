@@ -1,6 +1,7 @@
 <script>
 import axios from 'axios';
 import { store } from '../store';
+import { router } from '../router';
 
 export default {
     name: 'StoreShow',
@@ -9,8 +10,11 @@ export default {
             type: Object
         }
     },
-    components: {
 
+    methods: {
+        redirectToStoreInfo() {
+            router.push({ name: 'StoreInfo', params: { id: this.singleStore.id } });
+        }
     },
 
     data() {
@@ -29,8 +33,11 @@ export default {
 
 <template>
     <div class="storeshow-info-container">
-        <div class="img-container">
+        <div class="img-container" @click="redirectToStoreInfo">
             <img :src="store.imageURL + this.singleStore.logo" :alt="this.singleStore.logo">
+            <div class="store-card-overlay">
+                <span>{{ this.singleStore.store_name }}</span>
+            </div>
         </div>
         <div class="info-container">
             <span class="affiliation-code">{{ this.singleStore.affiliation_code }}</span>
