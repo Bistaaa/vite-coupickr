@@ -27,9 +27,7 @@ export default {
     },
 
     mounted() {
-        /* console.log('1: ', store);
-        console.log('2: ', this.store.errorImageURL);
-        console.log('3: ', this.store.errorImageURL + this.singleStore.logo); */
+        console.log('verifica', this.singleStore);
     }
 }
 </script>
