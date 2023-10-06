@@ -45,7 +45,7 @@ export default {
             <span class="discount">{{ this.singleStore.discount }} %</span>
         </div>
         <h3>{{ this.singleStore.store_name }}</h3>
-        <span class="end-offer">Fine Offerta: <b>10 novembre 2023</b></span>
+        <span class="end-offer">Fine Offerta: <b>{{ this.singleStore.validity }}</b></span>
         <hr>
     </div>
     <a class="storeshow-button" :href="this.singleStore.link">

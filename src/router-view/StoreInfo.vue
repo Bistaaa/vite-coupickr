@@ -55,7 +55,7 @@ export default {
                     <hr>
                     <li class="left-column-info"><span>Risparmio:</span><span>{{ this.storeData.discount }} %</span></li>
                     <hr>
-                    <li class="left-column-info"><span>Valido fino a:</span><span>10/11/2023</span></li>
+                    <li class="left-column-info"><span>Valido fino a:</span><span>{{ this.storeData.validity }}</span></li>
                 </ul>
             </div>
             <div class="img">
