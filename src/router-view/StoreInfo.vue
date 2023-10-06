@@ -21,11 +21,9 @@ export default {
         fetchStoreDetails() {
 
             const storeId = this.$route.params.id;
-            console.log("Fetching details for store with ID:", storeId);
 
             axios.get(store.apiURL + '/store/' + storeId)
                 .then(response => {
-                    console.log("API response:", response);
                     this.storeData = response.data.StoreById;
 
                 })
@@ -54,19 +52,22 @@ export default {
                 <ul>
                     <li class="left-column-info"><span>Codice Sconto:</span><span>{{ this.storeData.affiliation_code
                     }}</span></li>
+                    <hr>
                     <li class="left-column-info"><span>Risparmio:</span><span>{{ this.storeData.discount }} %</span></li>
+                    <hr>
                     <li class="left-column-info"><span>Valido fino a:</span><span>10/11/2023</span></li>
-                    <a :href="this.storeData.link">
-                        <li class="left-column-info"><span>Vai al sito</span></li>
-                    </a>
                 </ul>
             </div>
             <div class="img">
                 <img :src="this.store.imageURL + this.storeData.logo" @error="handleImageError"
                     :alt="this.storeData.store_name">
             </div>
-            <div class="description">
-                <p>{{ this.storeData.description }}</p>
+            <div class="description-container">
+                <span>Info riguardo {{ this.storeData.store_name }}</span>
+                <p class="description">{{ this.storeData.description }}</p>
+                <a :href="this.storeData.link">
+                    <button class="store-button">Vai al sito</button>
+                </a>
             </div>
         </div>
     </div>
