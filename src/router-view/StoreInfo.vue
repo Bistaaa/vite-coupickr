@@ -1,5 +1,6 @@
 <script>
 import axios from 'axios';
+import { router } from '../router';
 import { store } from '../store';
 import AppHeader from '../components/AppHeader.vue';
 import AppFooter from '../components/AppFooter.vue';
@@ -16,6 +17,9 @@ export default {
             store,
             storeData: {}
         };
+    },
+    mounted() {
+        window.scrollTo(0, 0);
     },
     methods: {
         fetchStoreDetails() {
@@ -34,6 +38,10 @@ export default {
 
         handleImageError(event) {
             event.target.src = this.store.errorImageURL + this.storeData.logo;
+        },
+
+        redirectToStoresShow() {
+            router.push({ name: 'StoresShow', params: { id: this.storeData.category_id } });
         },
     },
     created() {
@@ -70,6 +78,7 @@ export default {
                 </a>
             </div>
         </div>
+        <button class="back-button" @click="redirectToStoresShow">torna alla lista dei negozi </button>
     </div>
 
     <AppFooter />

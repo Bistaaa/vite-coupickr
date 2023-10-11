@@ -1,6 +1,7 @@
 <script>
 import axios from 'axios';
 import { store } from '../store';
+import { router } from '../router';
 import StoreCard from '../components/StoreCard.vue';
 import AppHeader from '../components/AppHeader.vue';
 import AppFooter from '../components/AppFooter.vue';
@@ -46,6 +47,10 @@ export default {
                     console.log(error);
                 });
         },
+
+        redirectToAppMain() {
+            router.push({ name: 'AppMain' });
+        },
     }
 }
 </script>
@@ -60,6 +65,7 @@ export default {
                 <StoreCard :singleStore="singleStore" />
             </div>
         </div>
+        <button class="back-button" @click="redirectToAppMain">torna alla lista delle categorie </button>
     </div>
 
     <AppFooter />
