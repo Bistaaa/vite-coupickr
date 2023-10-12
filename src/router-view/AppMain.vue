@@ -3,7 +3,7 @@
 import AppHeader from '../components/AppHeader.vue';
 import AppFooter from '../components/AppFooter.vue';
 import CategoriesShow from '../components/CategoriesShow.vue';
-import ContactUs from '../components/ContactUs.vue';
+import Newsletter from '../components/Newsletter.vue';
 
 export default {
   name: 'App',
@@ -11,7 +11,7 @@ export default {
     AppHeader,
     AppFooter,
     CategoriesShow,
-    ContactUs,
+    Newsletter,
   },
   mounted() {
     window.scrollTo(0, 0);
@@ -41,7 +41,7 @@ export default {
       </div>
 
       <CategoriesShow />
-      <ContactUs />
+      <Newsletter />
     </div>
 
 
